@@ -16,3 +16,4 @@ RUN sed -i 's/localhost/database.c8eomdedroqp.us-east-1.rds.amazonaws.com/g' /va
 EXPOSE 3306
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
+
