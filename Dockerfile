@@ -9,10 +9,10 @@ RUN rm -rf /var/www/html/*
 RUN unzip latest.zip -d /var/www/html
 RUN mv /var/www/html/wordpress/* /var/www/html
 RUN mv /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
-RUN sed -i 's/database_name_here/database/g' /var/www/html/wp-config.php
+RUN sed -i 's/database_name_here/wordpress/g' /var/www/html/wp-config.php
 RUN sed -i 's/username_here/user1/g' /var/www/html/wp-config.php
 RUN sed -i 's/password_here/prasad123/g' /var/www/html/wp-config.php
-RUN sed -i 's/localhost/database.c8eomdedroqp.us-east-1.rds.amazonaws.com/g' /var/www/html/wp-config.php
+RUN sed -i 's/localhost/wordpress.c8eomdedroqp.us-east-1.rds.amazonaws.com/g' /var/www/html/wp-config.php
 EXPOSE 3306
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
