@@ -16,4 +16,3 @@ RUN sed -i 's/localhost/wordpress.c8eomdedroqp.us-east-1.rds.amazonaws.com/g' /v
 EXPOSE 3306
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
-
